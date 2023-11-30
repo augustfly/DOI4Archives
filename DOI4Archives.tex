@@ -1,24 +1,36 @@
 \documentclass[11pt,a4paper]{ivoa}
 \input tthdefs
+\input gitmeta
 
-\title{???? Full title ????}
+\usepackage{todonotes}
+
+
+\title{Best practices for the creation of and metadata for digital object identifiers in astronomy archives}
 
 % see ivoatexDoc for what group names to use here; use \ivoagroup[IG] for
 % interest groups.
-\ivoagroup{???? group ????}
+\ivoagroup[IG]{Data Curation and Preservation}
 
-\author[????URL????]{????Alfred Usher Thor????}
-\author{????Fred Offline????}
+\author[https://orcid.org/0000-0003-0666-6367]{August Muench}
+\author[]{Gilles Landais}
+\author[]{Raffaele D'ABrusco}
 
-\editor{????Alfred Usher Thor????}
+\editor{TBD}
 
 % \previousversion[????URL????]{????Concise Document Label????}
-\previousversion{This is the first public release}
+\previousversion{This is a draft}
 
 
 \begin{document}
+\todo{This is only an outline! Everything is still to be done.}
+
 \begin{abstract}
-???? Abstract ????
+Many astronomy archives are producing digital object identifiers (DOI) for datasets and services.
+This document aims to summarize current workflows for creating and using DOIs, 
+diagnose issues in the metadata of extant DOIs, 
+and develop best practices for worklows and metadata for future DOI deployment.
+This note is focused on archives in Astronomy, Planetary Science, and Heliophysics. 
+Additional domains may be considered at a later time.
 \end{abstract}
 
 
@@ -43,7 +55,19 @@ infrastructure that enable VO applications.
 
 \section{Introduction}
 
-???? Write something ????
+\begin{enumerate}
+\item General observations. 
+We focus on roles of DOIs rather than the full landscape of FAIR data \citep[e.g.,][]{Wilkinson2016}. 
+It is beyond the scope of this document to address all aspects of FAIRness.
+We think that this document may help guide archives wrt F.X, A.Y of 
+\item Describe use cases for DOIs in astronomy: citation, provenance, ...
+\item DOIs do not lead to data and other future problems
+\item outline of IVOA note
+\end{enumerate}
+
+\begin{admonition}{Note}
+DOIs do not lead to data, or what they do lead to is widely varied
+\end{admonition}
 
 \subsection{Role within the VO Architecture}
 
@@ -56,7 +80,7 @@ infrastructure that enable VO applications.
 % Notes don't generally need this.  If you don't copy role_diagram.xml,
 % you must remove role_diagram.pdf from SOURCES in the Makefile.
 
-\includegraphics[width=0.9\textwidth]{role_diagram.pdf}
+%\includegraphics[width=0.9\textwidth]{role_diagram.pdf}
 \caption{Architecture diagram for this document}
 \label{fig:archdiag}
 \end{figure}
@@ -64,9 +88,119 @@ infrastructure that enable VO applications.
 Fig.~\ref{fig:archdiag} shows the role this document plays within the
 IVOA architecture \citep{2021ivoa.spec.1101D}.
 
-???? and so on, LaTeX as you know and love it. ????
+
+\section{Extant use of Digital Object Identifiers in Archives}
+
+\subsection{Collections}
+Examples of collection-type DOIs include MAST, Chandra, and VAMDC instances. 
+Collection-type DOIs. 
+There are strong variations in the metadata of Collection type DOIs.
+There is also variation in the expected use cases for these DOIs. 
+
+For example, MAST and Chandra DOIs collect dataset identifiers in their respective databases.
+There is no expectation that this collection DOIs would ever themselves collection attribution (citations).
+However, VAMDC collection DOIs, are intended to distributed credit to the collection of 
+They attempt to distribute this citation/credit to the collection of resources by "citing" all the related resources in the DOI record.
+We note that while this is the apparent intent of their records on Zenodo.
+However it is not having the functional outcome bc of how the metadata is being deposited at Datacite by Zenodo. 
+See Appendix A (on Datacite deposit curiosities).
+
+\subsection{Datasets}
+Examples of dataset DOIs include the IPAC, ESA, PDS, etc. 
+This is the most general use of DOIs in repositories.
+It is consistent with the usage of DOIs by institutional repositories, generalist repositories (e.g., Zenodo), etc.
+The dataset DOI resolves to a landing page describing the dataset.
+It provides one or more links to the data.
+The content of those data links is not prescribed. 
+
+\subsection{Services}
+Examples of DOIs for services include IRSA (DUST).
+Service DOIs lead to query tools.
+They may lead to query results -- I would need examples.
+
+Sometimes Collection DOIs act like Service DOIs but they are not.
+Collection DOIs may result from queries performed at a Service.
+\textbf{Warning: weeds.}
+
+\subsection{Knowledgebases}
+
+Define: a knowledgebase is a collection of material from many discrete sources.
+All of the values contained in a knowledge base have a provenance traced to other resources
+and have been curated into a single resource for reuse.
+Examples include: Simbad, NEA, NED. 
+DOIs for Knowledgebases lead users to the landing page of the collated, curated resource. 
+DOIs do not lead to individual values etc. 
+Services that return DOIs for queries against knowledgebase are considered Service DOIs (See Section \#\#).
+\textbf{Warning: weeds.}
+
+\subsection{IVOA Registry}
+DOIs are being used in some manner by the Registry.
+This includes both the storage of DOis and
+the minting of DOIs for Registry entries.
+\textit{Until I understand this better, I consider this category distinct from any of the others. 
+One reason is that I fear that there is a potential mis-management of DOI services here.
+The publisher of a DOI is responsible for the upkeep of the digital resource.
+If the IVOA DOI minting is providing DOIs for resources it does not manage, then this is a mismanagement of DOI services.}
+
+\section{Use cases for DOI metadata and current pathologies}
+
+\subsection{Use Cases}
+\begin{enumerate}
+\item Citation \& Attribution
+\item Tracking reuse and use cases
+\item Provenance (?)
+\item IVOA specific desires if different from above.
+\item Reproducibility (but not really)
+\end{enumerate}
+
+
+\subsection{Pathologies}
+The primary pathology evident in DOI minting today is a mismatch in the metadata created and the use case desired. 
+Succinctly, the metadata supplied by astronomy archives is often insufficient to ensure the accurate citation of the datasets used. 
+
+\begin{enumerate}
+\item Incomplete metadata: missing authors, terrible titles, misunderstood dates 
+\item Inconsistent: transmutations of metadata between systems lead to inconsistent metadata
+\item Versioning is ill defined and often opaquely transmitted
+\item DOIs do not lead to data, or what they do lead to is widely varied
+\end{enumerate}
+
+
+\section{Best Practices for DOI Workflows}
+
+\subsection{Workflows: Collections}
+\subsection{Workflows: Datasets}
+\subsection{Workflows: Knowledgebases}
+\subsection{Workflows: Other}
+
+\section{Best Practices for DOI Metadata}
+
+\subsection{Core Metadata: Names, Dates, }
+\begin{enumerate}
+\item Authorship: Decide on what mechanism will be used to transmit authorship (individuals or collaboration/institute) and stick to it.
+\item Authorship: The authorship list must include all contributors to the creation of a resource, individually, ... or none of them.
+\item Title: the title of a deposit must be unique and should describe the contents of the resource.
+\item Version: heaven help us.
+\item Dates: The date describes when the resource was made available on line, not when the DOI was minted. 
+The date of the most recent update to the DOI contents and/or metadata is a different date.
+\item Description: Consider if ADS indexes your resource. If you do not provide a description then the resource will be indexed w/o any text/abstract!
+\item Licensing and reuse permissions:
+\item Transmutations of metadata: 
+If you are supplying metadata in multiple formats (on landing pages, in DataCite XML, in schema.org tags)
+then ensure that all forms are consistently transformed. 
+There are crosswalks between these metadata schema (so list them)
+\end{enumerate}
+
+\subsection{Relationship Metadata}
+\begin{enumerate}
+\item 
+\end{enumerate}
+
 
 \appendix
+\section{Catalog of Repositories issuing DOIs}
+
+\section{Important DataCite (or other) }
 \section{Changes from Previous Versions}
 
 No previous versions yet.
@@ -76,7 +210,7 @@ No previous versions yet.
 
 % NOTE: IVOA recommendations must be cited from docrepo rather than ivoabib
 % (REC entries there are for legacy documents only)
-\bibliography{ivoatex/ivoabib,ivoatex/docrepo}
+\bibliography{ivoatex/ivoabib,ivoatex/docrepo,DOI4Archives}
 
 
 \end{document}

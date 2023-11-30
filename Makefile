@@ -2,20 +2,20 @@
 # for the targets available.
 
 # short name of your document (edit $DOCNAME.tex; would be like RegTAP)
-DOCNAME = ????
+DOCNAME = DOI4Archives
 
 # count up; you probably do not want to bother with versions <1.0
 DOCVERSION = 1.0
 
 # Publication date, ISO format; update manually for "releases"
-DOCDATE = ???
+DOCDATE = 2024-01-01
 
 # What is it you're writing: NOTE, WD, PR, REC, PEN, or EN
-DOCTYPE = ???
+DOCTYPE = NOTE
 
 # An e-mail address of the person doing the submission to the document
 # repository (can be empty until a make upload is being made)
-AUTHOR_EMAIL=???
+AUTHOR_EMAIL=august.muench@aas.org
 
 # Source files for the TeX document (but the main file must always
 # be called $(DOCNAME).tex)
