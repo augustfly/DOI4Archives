@@ -14,6 +14,7 @@
 \author[https://orcid.org/0000-0003-0666-6367]{August Muench}
 \author[]{Gilles Landais}
 \author[]{Raffaele D'ABrusco}
+\author[]{Anne Raugh}
 
 \editor{TBD}
 
@@ -59,15 +60,18 @@ infrastructure that enable VO applications.
 \item General observations. 
 We focus on roles of DOIs rather than the full landscape of FAIR data \citep[e.g.,][]{Wilkinson2016}. 
 It is beyond the scope of this document to address all aspects of FAIRness.
-We think that this document may help guide archives wrt F.X, A.Y of 
-\item Describe use cases for DOIs in astronomy: citation, provenance, ...
+We think that this document may help guide archives with achieve compliance for F.X, A.Y of the specific .
+\item Describe use cases and problems for DOIs in astronomy: citation, provenance, ...
 \item DOIs do not lead to data and other future problems
-\item outline of IVOA note
+\item Outline of IVOA note
+\item A complete listing of all astronomy/heliophysics/planetary science archvies issuing dataset (or other forms of) DOIs is given in Appendix A
+\item A series of important example case studies in DataCite metadata deposits is given in Appendix B.
 \end{enumerate}
 
 \begin{admonition}{Note}
-DOIs do not lead to data, or what they do lead to is widely varied
+Dataset DOIs do not lead to data, or what they do lead to is widely varied.
 \end{admonition}
+
 
 \subsection{Role within the VO Architecture}
 
@@ -92,28 +96,40 @@ IVOA architecture \citep{2021ivoa.spec.1101D}.
 \section{Extant use of Digital Object Identifiers in Archives}
 
 \subsection{Collections}
-Examples of collection-type DOIs include MAST, Chandra, and VAMDC instances. 
-Collection-type DOIs. 
-There are strong variations in the metadata of Collection type DOIs.
-There is also variation in the expected use cases for these DOIs. 
+\label{sec:intro:collections}
 
-For example, MAST and Chandra DOIs collect dataset identifiers in their respective databases.
-There is no expectation that this collection DOIs would ever themselves collection attribution (citations).
-However, VAMDC collection DOIs, are intended to distributed credit to the collection of 
-They attempt to distribute this citation/credit to the collection of resources by "citing" all the related resources in the DOI record.
-We note that while this is the apparent intent of their records on Zenodo.
-However it is not having the functional outcome bc of how the metadata is being deposited at Datacite by Zenodo. 
-See Appendix A (on Datacite deposit curiosities).
+
+Collection-type DOIs direct users to a collection of individual data records in a particular archive.
+Examples of collection-type DOIs include the DOI services provided by the Mikulski Archive for Space Telescopes (MAST)\footnote{\url{https://archive.stsci.edu}} \citep{2018ApJS..236...20N}, Chandra Data Archive (CDA)\footnote{\url{https://cxc.harvard.edu/cda/}} \citep{2018EPJWC.18612011R}, and the VAMDC Consortium\footnote{\url{https://vamdc.org}} Query Store service \citep{2018Galax...6..105M}.  
+There is significant variation in the expected use cases for these Collection DOIs. 
+There are also strong variations in the metadata of Collection-type DOIs.
+
+Considering use-cases, both MAST and Chandra Collection DOIs collect dataset identifiers within their respective databases.
+In both cases there is no expectation that these Collection DOIs would ever themselves collect attribution (i.e., be cited in the reference list of a corresponding Journal article).
+However, VAMDC Collection DOIs, are intended to collect and distribute credit to the collection of database identifiers they contain.
+They attempt to distribute this citation/credit to the collection of resources by "citing" all the related resources in the saved VAMDC query record.
+Because this depends upon the capabilities of both the chosen DOI minting service (Zenodo) and the DataCite Schema, additional  notes on the details and the outcomes of this effort is provided in one of our case studies in Appendix B. 
+
+Similarly the metadata of Collection DOIs vary between MAST and CDA examples. 
+As described in \citet{2023ChNew..34....5D}, Chandra Data Collection DOIs create complete records of individual using \texttt{relatedIdentifier} tags and predicates. 
+The metadata of MAST Collection DOIs do not provide detailed information on the individual MAST records collated in the collection.
+
 
 \subsection{Datasets}
-Examples of dataset DOIs include the IPAC, ESA, PDS, etc. 
-This is the most general use of DOIs in repositories.
+\label{sec:intro:datasets}
+
+Examples of dataset DOIs include the IPAC, ESA, PDS, MAST etc. 
+The most general use of DOIs in repositories.
 It is consistent with the usage of DOIs by institutional repositories, generalist repositories (e.g., Zenodo), etc.
 The dataset DOI resolves to a landing page describing the dataset.
-It provides one or more links to the data.
-The content of those data links is not prescribed. 
+The landing page provides one or more links to data.
+The content and structure of those data links is not prescribed. 
+
+Use cases 
 
 \subsection{Services}
+\label{sec:intro:services}
+
 Examples of DOIs for services include IRSA (DUST).
 Service DOIs lead to query tools.
 They may lead to query results -- I would need examples.
@@ -123,31 +139,31 @@ Collection DOIs may result from queries performed at a Service.
 \textbf{Warning: weeds.}
 
 \subsection{Knowledgebases}
+\label{sec:intro:kdbs}
 
-Define: a knowledgebase is a collection of material from many discrete sources.
-All of the values contained in a knowledge base have a provenance traced to other resources
-and have been curated into a single resource for reuse.
-Examples include: Simbad, NEA, NED. 
-DOIs for Knowledgebases lead users to the landing page of the collated, curated resource. 
-DOIs do not lead to individual values etc. 
-Services that return DOIs for queries against knowledgebase are considered Service DOIs (See Section \#\#).
+A knowledgebase is a collection of material collated from many discrete sources.
+All of the values contained in a knowledgebase have a provenance traced to other resources and have been curated into a single database for reuse.
+Examples include: Simbad \citep[as originally described in, ][]{2000A&AS..143....9W}, NASA Exoplanet Archive (NEA) \citep{NEA12-doi2bib} \citep[as originally described in,][]{2013PASP..125..989A}, NASA Extragalactic Database (NED) \citep{NED1-doi2bib} \citep[as originally described in,][]{1991ASSL..171...89H}. 
+
+Current observations about DOIs for knowledgebases include:
+DOIs for knowledgebases lead users to interstitial landing pages rather than directly to the collated, curated resources.
+DOIs for knowledgebases do not lead to individual values, e.g., the results of a query against that knowledgebase.
+DOIs for knowledgebases never provide information in their metadata about the \textit{state} of a knowledgebase: its current version; last update; etc. 
+Nor is this information on the interstitial landing pages of knowledgebases.
+Services that return DOIs for queries against knowledgebase are considered Service DOIs (See Section~\ref{sec:intro:services}).
 \textbf{Warning: weeds.}
 
 \subsection{IVOA Registry}
 DOIs are being used in some manner by the Registry.
-This includes both the storage of DOis and
-the minting of DOIs for Registry entries.
-\textit{Until I understand this better, I consider this category distinct from any of the others. 
-One reason is that I fear that there is a potential mis-management of DOI services here.
-The publisher of a DOI is responsible for the upkeep of the digital resource.
-If the IVOA DOI minting is providing DOIs for resources it does not manage, then this is a mismanagement of DOI services.}
+This includes both the indexing of DOIs related to Registry records and the minting of DOIs for Registry entries.
+\textit{Until I understand this better, I consider this category distinct from any of the others.  One reason is that I fear that there is a potential mis-management of DOI services here. The publisher of a DOI is responsible for the upkeep of the digital resource. If IVOA DOI minting is providing DOIs for resources it does not manage, then this is potential mismanagement of DOI services. It is not unlike the ill-begotten aims of similar 3rd party DOI minting by \url{Re3data.Org} and \url{FAIRsharing.org} that have, for example, created DOIs for Simbad \citep{https://doi.org/10.17616/r39w29,https://doi.org/10.25504/fairsharing.rd6gxr} that really ought never be used by anyone aiming to cite Simbad for the source of their results. }
 
 \section{Use cases for DOI metadata and current pathologies}
 
 \subsection{Use Cases}
 \begin{enumerate}
 \item Citation \& Attribution
-\item Tracking reuse and use cases
+\item Tracking reuse and discovering reuse modes
 \item Provenance (?)
 \item IVOA specific desires if different from above.
 \item Reproducibility (but not really)
@@ -155,14 +171,16 @@ If the IVOA DOI minting is providing DOIs for resources it does not manage, then
 
 
 \subsection{Pathologies}
-The primary pathology evident in DOI minting today is a mismatch in the metadata created and the use case desired. 
-Succinctly, the metadata supplied by astronomy archives is often insufficient to ensure the accurate citation of the datasets used. 
+The primary pathology evident in DOI creation today is a mismatch between the metadata created and the use case desired. 
+Succinctly, the metadata supplied by astronomy archives is often insufficient to ensure the accurate citation of the datasets created.
+By detailing these pathologies and triaging their less-than-desirable outcomes we can aim to develop empirically-defined best practices to guide repositories forward with the use of identifiers.
+Here is a topical list of pathologies:
 
 \begin{enumerate}
-\item Incomplete metadata: missing authors, terrible titles, misunderstood dates 
-\item Inconsistent: transmutations of metadata between systems lead to inconsistent metadata
-\item Versioning is ill defined and often opaquely transmitted
-\item DOIs do not lead to data, or what they do lead to is widely varied
+\item Incomplete metadata: missing authors, generic or misstated titles, misunderstood dates;
+\item Inconsistent metadata: transmutations of metadata between systems lead to inconsistent metadata deposits;
+\item (Un)versioned data: versioning is mostly nonexistent and when provided it is ill defined and often opaquely transmitted;
+\item Misconceptions: DOIs do not lead to data, or what they do lead to is widely varied.
 \end{enumerate}
 
 
@@ -207,6 +225,10 @@ No previous versions yet.
 % these would be subsections "Changes from v. WD-..."
 % Use itemize environments.
 
+\begin{admonition}{Note}
+All dataset citations in this document were created using BibTeX. The BibTeX for the data/service/collection DOIs is based upon the \texttt{verbatim} metadata supplied by the archive to their choice of DOI registration services as expressed by the doi2bib service\footnote{\url{https://doi2bib.org}}. The doi2bib service was selected because it does the best job protecting unfielded author names from complete BibTeX annihilation.
+Every other reference BibTeX came from NASA ADS\footnote{\url{https://ui.adsabs.harvard.edu/}}.
+\end{admonition}
 
 % NOTE: IVOA recommendations must be cited from docrepo rather than ivoabib
 % (REC entries there are for legacy documents only)

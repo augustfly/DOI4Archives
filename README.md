@@ -1,5 +1,6 @@
-This document describes/defines FILL-THIS-OUT in the [Virtual
-Observatory](https://ivoa.net)
+This document describes/defines the IVOA note, "Best practices for the
+creation of and metadata for digital object identifiers in astronomy
+archives," in the [Virtual Observatory](https://ivoa.net)
 
 Stable versions of this document are available through the [IVOA
 document repository](http://ivoa.net/documents/).
