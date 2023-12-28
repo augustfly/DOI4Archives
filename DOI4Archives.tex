@@ -154,16 +154,25 @@ Services that return DOIs for queries against knowledgebase are considered Servi
 \textbf{Warning: weeds.}
 
 \subsection{IVOA Registry}
+\label{sec:intro:ivoa}
 DOIs are being used in some manner by the Registry.
 This includes both the indexing of DOIs related to Registry records and the minting of DOIs for Registry entries.
 \textit{Until I understand this better, I consider this category distinct from any of the others.  One reason is that I fear that there is a potential mis-management of DOI services here. The publisher of a DOI is responsible for the upkeep of the digital resource. If IVOA DOI minting is providing DOIs for resources it does not manage, then this is potential mismanagement of DOI services. It is not unlike the ill-begotten aims of similar 3rd party DOI minting by \url{Re3data.Org} and \url{FAIRsharing.org} that have, for example, created DOIs for Simbad \citep{https://doi.org/10.17616/r39w29,https://doi.org/10.25504/fairsharing.rd6gxr} that really ought never be used by anyone aiming to cite Simbad for the source of their results. }
 
-\section{Use cases for DOI metadata and current pathologies}
+\section{Use cases and current pathologies for Dataset DOIs }
 
 \subsection{Use Cases}
+\label{sec:use:cases}
+
+Present use cases comprise:
 \begin{enumerate}
-\item Citation \& Attribution
+\item Providing a means for citation \& attribution
+\item Enabling open data (and reuse)
 \item Tracking reuse and discovering reuse modes
+\end{enumerate}
+
+Additional use cases that can be discussed as needing dataset DOIs include:
+\begin{enumerate}
 \item Provenance (?)
 \item IVOA specific desires if different from above.
 \item Reproducibility (but not really)
@@ -171,8 +180,9 @@ This includes both the indexing of DOIs related to Registry records and the mint
 
 
 \subsection{Pathologies}
-The primary pathology evident in DOI creation today is a mismatch between the metadata created and the use case desired. 
-Succinctly, the metadata supplied by astronomy archives is often insufficient to ensure the accurate citation of the datasets created.
+\label{sec:use:patho}
+The primary pathology evident in DOI creation today is a mismatch between the metadata created by an archive and the use case (intended to be) implemented by that DOI. 
+Succinctly, the metadata supplied by astronomy archives is often insufficient to ensure the accurate citation of the datasets.
 By detailing these pathologies and triaging their less-than-desirable outcomes we can aim to develop empirically-defined best practices to guide repositories forward with the use of identifiers.
 Here is a topical list of pathologies:
 
@@ -185,51 +195,109 @@ Here is a topical list of pathologies:
 
 
 \section{Best Practices for DOI Workflows}
-
+\label{sec:bpwork}
 \subsection{Workflows: Collections}
+Include related identifiers linking the collection DOI to internal and if possible external identifiers for the dataset(s)
+
 \subsection{Workflows: Datasets}
+Include related identifiers for other sources of the data, for other digital objects that describe or contextualize the data
+
 \subsection{Workflows: Knowledgebases}
+Maybe don't use DOIs or figure out how to use them effectively to transmit \textit{state} or \textit{version} information?
+
 \subsection{Workflows: Other}
+Broad discussion of Query DOIs? 
 
 \section{Best Practices for DOI Metadata}
+\label{sec:bpmeta}
+\todo{Some kind of table/graph relating meta to use case would be nice}
+\subsection{Core Metadata}
+\label{sec:bpmeta:core}
 
-\subsection{Core Metadata: Names, Dates, }
-\begin{enumerate}
-\item Authorship: Decide on what mechanism will be used to transmit authorship (individuals or collaboration/institute) and stick to it.
-\item Authorship: The authorship list must include all contributors to the creation of a resource, individually, ... or none of them.
-\item Title: the title of a deposit must be unique and should describe the contents of the resource.
-\item Version: heaven help us.
-\item Dates: The date describes when the resource was made available on line, not when the DOI was minted. 
-The date of the most recent update to the DOI contents and/or metadata is a different date.
-\item Description: Consider if ADS indexes your resource. If you do not provide a description then the resource will be indexed w/o any text/abstract!
-\item Licensing and reuse permissions:
-\item Transmutations of metadata: 
-If you are supplying metadata in multiple formats (on landing pages, in DataCite XML, in schema.org tags)
-then ensure that all forms are consistently transformed. 
-There are crosswalks between these metadata schema (so list them)
-\end{enumerate}
+\paragraph{Authorship} 
+Archives must decide on what mechanism will be used to transmit authorship of data records. The choices include (a) full itemization of all contributions to a dataset or collection and (b) formal use of  "collaboration/institute" names, e.g., The CANDELS collaboration. And stick to it.
+If itemized then the authorship list must include all contributors to the creation of a resource, individually, ... or none of them.
+
+\paragraph{Title} 
+The title of a deposit must be unique and should describe the contents of the resource. 
+Duplicating the title of a related article or dataset is easy but is not unique and almost certainly does not describe the contents of the deposit.
+
+\paragraph{Version} 
+heaven help us.
+
+\paragraph{Dates} 
+The date describes when the resource was made available on line, not when the DOI was minted. The date of the most recent update to the DOI contents and/or metadata is a different date. You can provide different kinds of dates.
+
+\paragraph{Description} 
+Consider if ADS indexes your resource. If you do not provide a description then the resource will be indexed w/o any text/abstract! Even a minimal summary is an improvement over no description/abstract.
+
+\paragraph{Licensing and reuse permissions} 
+Pretty important that the license is provided and that the license matches any other license that has been applied to these results. 
+In other words, if you copy data from a resources then you can't give it a new license.
+NASA wants you to use CC0.
+
+\paragraph{Transmutations of metadata} 
+If you are supplying metadata in multiple formats (on landing pages, in DataCite XML, in schema.org tags) then ensure that all forms are consistently transformed. 
+There are crosswalks between these metadata schema (e.g. between DataCite and Schema.org Dataset). 
+Using such crosswalks can ensure that the metadata is expressed consistently to all such services.
+
 
 \subsection{Relationship Metadata}
+\label{sec:bpmeta:related}
 \begin{enumerate}
-\item 
+\item Related Identifiers
+\item Predicates
 \end{enumerate}
 
 
 \appendix
-\section{Catalog of Repositories issuing DOIs}
+\section{Catalog of Repositories and Archives issuing DOIs}
+\label{sec:catalog}
+\todo{Needs a lot of work to document these}
 
-\section{Important DataCite (or other) }
+This is not an update of the \citet{2022ApJS..260....5C} appendix. 
+This is meant to also provide additional information about what kinds of DOIs are minted and what types of deposits the archive will accept.
+
+\subsection{Domain Specific repositories}
+\begin{enumerate}
+\item CADC
+\item CDA
+\item China-VO
+\item ESA
+\item ESO
+\item IPAC
+\item MAST
+\item NEA
+\end{enumerate}
+
+\subsection{Generalist repositories}
+\begin{enumerate}
+\item Dataverse
+\item Dryad
+\item Zenodo
+\item Other?
+\end{enumerate}
+
+
+\section{Important DataCite Metadata Case Studies}
+This section describes case studies around the metadata created by three archives. 
+These case studies let us break out specific DataCite metadata recommendations and JSON snippets
+\subsection{Chandra Data Archive}
+\subsection{VAMDC \& Zenodo workflow}
+\subsection{Vizier}
+
 \section{Changes from Previous Versions}
 
 No previous versions yet.
 % these would be subsections "Changes from v. WD-..."
 % Use itemize environments.
 
+\clearpage
 \begin{admonition}{Note}
-All dataset citations in this document were created using BibTeX. The BibTeX for the data/service/collection DOIs is based upon the \texttt{verbatim} metadata supplied by the archive to their choice of DOI registration services as expressed by the doi2bib service\footnote{\url{https://doi2bib.org}}. The doi2bib service was selected because it does the best job protecting unfielded author names from complete BibTeX annihilation.
+All dataset citations in this document were created using BibTeX. The BibTeX for the data/service/collection DOIs is based upon the \texttt{verbatim} metadata supplied by the archive to their choice of DOI registration services as expressed by the doi2bib service\footnote{\url{https://doi2bib.org}}. The doi2bib service was selected because it does the best job protecting unfielded "author" names from complete BibTeX annihilation.
 Every other reference BibTeX came from NASA ADS\footnote{\url{https://ui.adsabs.harvard.edu/}}.
-\end{admonition}
-
+\end{admonition}%
+%
 % NOTE: IVOA recommendations must be cited from docrepo rather than ivoabib
 % (REC entries there are for legacy documents only)
 \bibliography{ivoatex/ivoabib,ivoatex/docrepo,DOI4Archives}
