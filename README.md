@@ -7,7 +7,7 @@ document repository](http://ivoa.net/documents/).
 
 To build a PDF version this document, you will need a reasonably
 complete LaTeX installation, a sufficiently capable `make`, preferably
-[latexmk](https://personal.psu.edu/~jcc8/software/latexmk/) and probably
+[latexmk](https://www.cantab.net/users/johncollins/software/latexmk/) and probably
 [rsvg-convert](https://wiki.gnome.org/Projects/LibRsvg). For further
 details, see [ivoatexDoc](https://github.com/ivoa-std/ivoatex).
 
