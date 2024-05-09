@@ -13,21 +13,26 @@ DOI workflow requires metadata curation based on the DataCite schema which allow
 
 For instance, the IVOA framework provides a registry with a high level  of interoperability and point directly to the resources, whereas Datacite is specialized in data citation and link a human web page called 'landing page'.
 
-```**Note**: DOI implies to maintain a sustainable mechanism to provide a URL. This requirements, even if also in usage in the IVOA registry, is mandatory for DOI.
+```
+DOI implies to maintain a sustainable mechanism to provide a URL. 
+This requirements, even if also in usage in the IVOA registry, is mandatory for DOI.
 ```
 
 Datasets distributed in diverses frameworks complement each other and are likeky harvested by platforms or search engine such as ADS, EOSC, Google Dataset. These infrastructure adopt merge mechanisms, often a black box, that depends of their own strategy. Note that DOI, as unique identifier, facilitate the cross operations.
 
 The list of metadata tends to increase, but the most popular are DataCite schema, The Dublin Core (the ivoa registry was based on it), schema.org (extend Dublin Core and is used by Google), DCAT (linked catalogues, datasets and services. DCAT is a concurent of the VO registry, used for instance in Earth sciences), OpenCitation (a schema of linked citation),  etc.
 
-```All are specific, and we highlight the importance for Data providers to disseminate consistent metadata (for instance list the whole authors in all output).
+```
+All are specific, and we highlight the importance for Data providers to disseminate consistent metadata
+ (for instance list the whole authors in all output).
 ```
 
 In practice, it is better for implementers to think since the begining about the different output in order to provide consistent workflow.
 
 **Note**: DataCite provides several serialisation of the metadata, in particular "schema.org".
 
-```Maintain the disseminations workflows togethers
+```
+Maintain the disseminations workflows togethers
 ```
 See also the presention of H.Enke, Interop 2023, Bologna: https://wiki.ivoa.net/internal/IVOA/InterOpMay2023RegistryDCP/DOI-AIP-20230510.pdf
 
@@ -38,7 +43,10 @@ Example Chandra
 Landing page is a WEB page attached to the DOI (eg: ....)
 Datacite provides a documentation about good usage (https://support.datacite.org/docs/landing-pages)
 
-```the landing page is primarily dedicated for Human. The whole DOI metadata should be visible in the web page. In particular, the DOI, title, authors, licences should be highlighted.
+```
+the landing page is primarily dedicated for Human. 
+The whole DOI metadata should be visible in the web page. 
+In particular, the DOI, title, authors, licences should be highlighted.
 ```
 
 Additional information are often added. In particular links to services to access the data, but also any other information, specific to the data center or included in other workflows provided by the Data Center (bibtex, schema.org, DCAT, etc)
