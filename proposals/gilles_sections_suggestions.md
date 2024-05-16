@@ -27,15 +27,15 @@ see [tombstone.md](tombstone.md)
 see [versioning.md](versioning.md)
 
 # Recommendation checklist
-see [checklist.md][checklist.md]
+see [checklist.md](checklist.md)
 
 
 # Metadata list:
 - authors/contributors
-- keywords
+- keywords [metakeywords.md](metakeywords.md)
 - dates
 - title and description
-- licences
+- licences [metalicences.md](metalicences.md)
 - alternate identifier
 - linked data:
   - collection of resources
