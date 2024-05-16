@@ -3,7 +3,9 @@ Landing page is a WEB page attached to the DOI (eg: ....)
 Datacite provides a documentation about good usage (https://support.datacite.org/docs/landing-pages)
 
 ```
-The landing page is primarily dedicated for Human. The whole DOI metadata should be visible in the web page. In particular, the DOI, title, authors, licences should be highlighted.
+The landing page is primarily dedicated for Human. 
+The whole DOI metadata should be visible in the web page. In particular, 
+the DOI, title, authors, licences should be highlighted.
 ```
 
 Additional information are often added. In particular links to services to access the data, but also any other information, specific to the data center or included in other workflows provided by the Data Center (bibtex, schema.org, DCAT, etc)
