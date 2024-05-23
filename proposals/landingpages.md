@@ -1,5 +1,5 @@
 # Landing pages
-Landing page is a WEB page attached to the DOI (eg: ....)
+Landing page is a human readable WEB page attached to the DOI (eg: ....)
 Datacite provides a documentation about good usage (https://support.datacite.org/docs/landing-pages)
 
 ```

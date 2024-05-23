@@ -1,4 +1,4 @@
-I suggest to add sections that could enforce practical aspects in the notes:
+I suggest to add sections that could enforce practical aspects in the note:
 
 - Building a dissemination workflow
 - Building an interconnected DOI workflow
