@@ -1,4 +1,4 @@
-# Building a dissemination worklow
+# Providing metadata using the appropriate schema
 DOI workflow requires metadata curation based on the [DataCite schema](https://datacite-metadata-schema.readthedocs.io/) which allows to improve the FAIRness of the datasets. Other workflows exist with their own semantic and metadata serialisation. These are multiple, they overlap and are also specific.
 
 For instance, the IVOA framework provides a registry with a high level  of interoperability and point directly to the resources, whereas Datacite is specialized in data citation and link a human web page called 'landing page'.

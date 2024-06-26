@@ -8,11 +8,11 @@ I suggest to add sections that could enforce practical aspects in the note:
 - versioning
 - recommendation checklist
 
-# Building a dissemination worklow
+# Providing metadata using the appropriate schema
 see [dissemination.md](dissemination.md)
 
-# Building an interconneted DOI workflow
-Example Chandra
+# Linked Data
+see [linkedata.md](linkedata.md)
 
 # Landing pages
 see [landingpages.md](landingpages.md)
