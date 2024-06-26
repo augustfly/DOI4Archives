@@ -31,7 +31,7 @@ see [checklist.md](checklist.md)
 
 
 # Metadata list:
-- authors/contributors 
+- authors/contributors [authors.md](authors.md)
 - keywords [metakeywords.md](metakeywords.md)
 - dates
 - title and description
