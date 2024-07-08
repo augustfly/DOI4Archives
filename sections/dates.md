@@ -5,8 +5,7 @@ DataCite provides a list of terms to qualify dates such as "Created", "Updated, 
 The dates involve the publication in the data center only.
 ```
  
-For instance a dataset pulished in by a Data Center A may have been created months or even years before and already beeen published in a reference article or an other data center B.
-In any case, the "Creation" date is the date of creation in the Data center A.
+For example, a dataset shredded by a Data Center A may have been created months or even years ago and already published in a reference article or another Data Center B. In any case, the date of "Creation" is the date of creation in the Data Center A.
 
 
 **Note**: dates have not to be used as versioning. 
