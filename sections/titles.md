@@ -2,7 +2,8 @@
 Title is an important metadata, it describes the resource and is often exploited by search engine (such as ADS or VO-registry) in a text search process.
 
 ```
-Assigning a title is specific to each dataset. It is a short and unique sentence that contains the most relevant aspects of the dataset.
+Assigning a title is specific to each dataset. 
+It is a short and unique sentence that contains the most relevant aspects of the dataset.
 ```
 
 
@@ -10,14 +11,17 @@ For datasets derived or attached to a reference article, it is better to create 
 
 Example :
 - Reference article:  ApJ (Draper Z.H, 2000), https://doi.org?10.1088/0004-637X/786/2/120
+
     "Disk-loss and disk-renewal phases in classical Be stars. II. Contrasting with stable and variable disks"
 - Dataset Title : VizieR, https://doi.org? 10.26093/cds/vizier.17860120
+
     "Spectropolarimetric survey of classical Be stars"
 
 
 To make a good title is of course specific to the dataset, we dress here a non exhaustive list of relevant information that could be included in a title:
 
-**I don't know if we could explain that by example? I give here some idea to create a good title - the list is clearly not exhausitv and must nbe updated**
+**I don't know if it ies a good idea to explain what is a good title ? 
+I give here some idea to create a good title - the list is clearly not exhaustiv and must be updated**
 - An observation dataset of a peculiar astronomical object must contains the object name in the title.
 - A study of a particular type of object must be in the title. 
 - For observations, the wave band or the facility can complete the title
@@ -30,13 +34,14 @@ example of title: TODO
 
 # Description
 
-The description completes the title. Generaly, the description is not exploited by search process as it is often the case with title.
+The description completes the title. Generaly, the description is not exploited by search process.
 However, like the title, the description describes the data and not its reference, even when the data comes from an original resource. 
 
 Datacite provides a description qualifier ("Abstract", "Methods", ...) which depends of the resource.
 
-## Description for data derived from external resource
-When the data derived from an external resource is not a simple copy, it is recommended to adapt the description of the original.
+## Description for data derived from external resource
+
+When the data derived from an external resource is not a simple copy, it is recommended to adapt the original description.
 For example, in the case of data attached to a published article, rather than reproducing the abstract of the reference article (which may also be subject to the same license as the article), the description may focused on the dataset content with added information such as thoses usefull to produce the datasets.
 
 An other good practice consist to add in the description a reference to the data origin.

@@ -74,14 +74,8 @@ But, both can have their own DOI. We encourage derived resource as wel as copy m
 There are lots of reasons why a DataCenter that provides a derived resource want to provide a DOI. 
 Often, the derived product is the result of a curation that provides added values.
 
-<<<<<<< HEAD
 Before creating a DOI, we encourage the DataCenter to tell their DOI plan to the original archive.
-
 Some metadata of the original resources should be copyed in the derived product, and other will be dedicated to the derived product.
-=======
-Before creating a DOI, we encourage the DataCenter to contact the original archive and explain his plan to assign a DOI.
-Some metadata from the original resources should be copyed as metadata of the derived product. But the derived metadata can also be competed with information.
->>>>>>> fca582e977c4657264ab06e1d89de9113e18199c
 
 - Authors: the full authors (creators and contributors) list should be copyed in the derived metadata. The list can be completed with contributors involved in the derived product curation.
 - Dates: the creation and the modification dates are the dates of the DataCenter that provide the derived product

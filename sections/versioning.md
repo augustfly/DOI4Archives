@@ -11,9 +11,9 @@ Different mechanisms exist:
 
 
 # Evolving datasets
-Versioning is well adapted for data subject to planified update, such as surkey releases for instance. Versioning that includes a new DOI creation is preferable for reproducibility, 
-However,there are other datasets that evolves regularly and for who a versioning is inapropriate. For instance a database like NED or Simbad evolves every days.
+Versioning is well adapted for data subject to planified update, such as survey releases for instance. Versioning that includes a new DOI creation is preferable for reproducibility, 
+However,there are other datasets that evolves regularly and for which versioning is inapropriate. For instance a database like NED or Simbad evolves every days.
 
 
 For those type of datasets, se suggest to add in the DOI description the evolving nature of the datasets and to modify the "Update" date at each modification.
-In a tight flow context, one have to consider too the "resourceType" as to be a "Services"
+In a tight flow context, one have to consider too the "resourceType" as to be a "Service"
