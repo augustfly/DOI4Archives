@@ -23,7 +23,7 @@ see [citation.md](citation.md)
 # Tombstone page
 see [tombstone.md](tombstone.md)
 
-# Versioning
+# Versioning and evolving datasets
 see [versioning.md](versioning.md)
 
 # Recommendation checklist
@@ -33,8 +33,8 @@ see [checklist.md](checklist.md)
 # Metadata list:
 - authors/contributors [authors.md](authors.md)
 - keywords [metakeywords.md](metakeywords.md)
-- dates
-- title and description
+- dates [dates.md](dates.md)
+- title and description [titles.md](titles.md)
 - licences [metalicences.md](metalicences.md)
 - alternate identifier
 - linked data:
