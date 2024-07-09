@@ -18,17 +18,15 @@ Example :
     "Spectropolarimetric survey of classical Be stars"
 
 
-To make a good title is of course specific to the dataset, we dress here a non exhaustive list of relevant information that could be included in a title:
+Making a good title is of course specific to the dataset. For instance, we can name the object or type studied, the facility used, the release version, or the  measurement methods if it is spectropscopy or photometry, etc.
 
-**I don't know if it ies a good idea to explain what is a good title ? 
-I give here some idea to create a good title - the list is clearly not exhaustiv and must be updated**
-- An observation dataset of a peculiar astronomical object must contains the object name in the title.
+<!--- An observation dataset of a peculiar astronomical object must contains the object name in the title.
 - A study of a particular type of object must be in the title. 
 - For observations, the wave band or the facility can complete the title
 - In some case, the observation methods are important
 - For catalogues providing a media, indicated the type of data (for example catalogue of spectra)
 - If the dataset is the final product of a suvey, then the survey name must be in the title with its version release.
-
+-->
 
 example of title: TODO
 
@@ -37,7 +35,7 @@ example of title: TODO
 The description completes the title. Generaly, the description is not exploited by search process.
 However, like the title, the description describes the data and not its reference, even when the data comes from an original resource. 
 
-Datacite provides a description qualifier ("Abstract", "Methods", ...) which depends of the resource.
+Datacite provides a description qualifier (```Abstract```, ```Methods```, ...) which depends of the resource.
 
 ## Description for data derived from external resource
 
@@ -48,4 +46,5 @@ An other good practice consist to add in the description a reference to the data
 
 Example : VizieR DOI description example -
 
-        VizieR online Data Catalogue associated with article published in journal Monthly Notices of the Royal Astronomical Society with title '......
+   "VizieR online Data Catalogue associated with article published in journal 
+    Monthly Notices of the Royal Astronomical Society with title ... "
