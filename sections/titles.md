@@ -10,10 +10,10 @@ It is a short and unique sentence that contains the most relevant aspects of the
 For datasets derived or attached to a reference article, it is better to create a new description  that describes the dataset.
 
 Example :
-- Reference article:  ApJ (Draper Z.H, 2000), https://doi.org?10.1088/0004-637X/786/2/120
+- Reference article:  ApJ (Draper Z.H, 2000), https://doi.org/10.1088/0004-637X/786/2/120
 
     "Disk-loss and disk-renewal phases in classical Be stars. II. Contrasting with stable and variable disks"
-- Dataset Title : VizieR, https://doi.org? 10.26093/cds/vizier.17860120
+- Dataset Title : VizieR, https://doi.org/10.26093/cds/vizier.17860120
 
     "Spectropolarimetric survey of classical Be stars"
 

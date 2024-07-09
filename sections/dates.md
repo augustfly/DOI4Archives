@@ -1,6 +1,6 @@
 # Dates
 
-DataCite provides a list of terms to qualify dates such as ```Created```, ```Updated, ```Validated```, etc.
+DataCite provides a list of terms to qualify dates such as ```Created```, ```Updated```, ```Validated```, etc.
 ```
 The dates involve the publication in the data center only.
 ```
