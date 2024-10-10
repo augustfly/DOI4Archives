@@ -8,11 +8,11 @@ I suggest to add sections that could enforce practical aspects in the note:
 - versioning
 - recommendation checklist
 
-# Building a dissemination worklow
+# Providing metadata using the appropriate schema
 see [dissemination.md](dissemination.md)
 
-# Building an interconneted DOI workflow
-Example Chandra
+# Linked Data
+see [linkedata.md](linkedata.md)
 
 # Landing pages
 see [landingpages.md](landingpages.md)
@@ -23,7 +23,7 @@ see [citation.md](citation.md)
 # Tombstone page
 see [tombstone.md](tombstone.md)
 
-# Versioning
+# Versioning and evolving datasets
 see [versioning.md](versioning.md)
 
 # Recommendation checklist
@@ -33,8 +33,8 @@ see [checklist.md](checklist.md)
 # Metadata list:
 - authors/contributors [authors.md](authors.md)
 - keywords [metakeywords.md](metakeywords.md)
-- dates
-- title and description
+- dates [dates.md](dates.md)
+- title and description [titles.md](titles.md)
 - licences [metalicences.md](metalicences.md)
 - alternate identifier
 - linked data:

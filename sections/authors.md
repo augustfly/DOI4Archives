@@ -36,14 +36,15 @@ Example of a unique author.
 ```
     
 ## Creators and contributors
-DataCite semantic distinguishes creators and contributors. The authors are conceptually the same that the Datacite term "creator" (issues #26).
+DataCite distinguishes ```Creators``` and ```Contributors```. The authors are conceptually the same that the Datacite term ```Creators``` (issues #26).
 
-- The "creator" can be a Person or an organization.
-- Contributors are persons or organizations that contributed to the development of the resources (SIC DataCite Schema 4.5).  
-A contributor has a role (eg: 'Editor', 'Supervisor', etc.) that can be assigned with a controled vocubulary in 'contributorType' term 
-(see the complete list in [DataCite Schema](https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.5/pdf/)).
+- The "creator" can be a Person or an Organization.
+- Contributors are persons or organizations that contributed to the development of the resources (sic DataCite Schema 4.5).  
+A contributor has a role (eg: ```Editor```, ```Supervisor```, etc.) taken in a controled vocabulary
+(see ```contributorType``` term and the complete list in [DataCite Schema](https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.5/pdf/)).
 
-Contributors can be considered as a creator alternative. For instance Zenodo in its upload form proposes to add a role on the creators. However, In Zenodo, the roles are exploited in different output but not in DOI in which only Creator term is used.
+In a way "Contributors" are an alternative of "Creators". For instance, [Zenodo](https://zenodo.org) provides a way to add a role to creators in its upload form.
+However, DOI created by Zeonodo used only ```Creators``` term.
 
 The usage of Contributor in citation has not been evaluated today.
 
